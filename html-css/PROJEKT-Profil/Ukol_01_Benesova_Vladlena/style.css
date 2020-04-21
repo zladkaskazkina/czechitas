@@ -1,0 +1,95 @@
+/* nejsme vcerejsi, pouzivame moderni a intuitivni box model */
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+/*
+BARVY
+czechitas  #b92e81
+pozadi     #bdc3c7
+tmava      #31363b
+delitka    #3f464d
+portfolio  #e74c3c
+facebook   #3b5998
+twitter    #1da1f2
+*/
+
+body {
+  background-color: #bdc3c7;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #bdc3c7;
+}
+.foto {
+  width: 100%;
+}
+.jmeno {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+}
+.profil {
+  width: 300px;
+  height: auto;
+  overflow: auto;
+  background-color: #31363b;
+  position: relative;
+  box-shadow: 3px 5px 10px 3px grey;
+}
+.logo {
+  background-color: #b92e81;
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  top: 180px;
+  box-shadow: 3px 5px 10px 3px grey;
+}
+.obsah {
+  padding: 10px 30px;
+}
+
+/* Odkazy */
+.odkazy {
+  list-style-type: none;
+  padding: 0;
+}
+a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0.5;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+.portfolio {
+  border-style: solid none;
+  border-color: #3f464d;
+  border-width: 1px;
+  font-weight: 600;
+}
+.portfolio:hover {
+  background-color: #e74c3c;
+}
+.facebook {
+  width: 50%;
+  float: left;
+}
+.facebook:hover {
+  background-color: #3b5998;
+}
+
+.twitter {
+  width: 50%;
+  border-left: solid 1px #3f464d;
+  float: right;
+}
+.twitter:hover {
+  background-color: #1da1f2;
+}
