@@ -1,40 +1,115 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
-
-
-/* -------------------------------------------------- */
-
-/*
-pouzivame mobile first pristup
-tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni (telefony)
-s pribyvajici sirkou pridavame media query pro...
-tablety:
-@media (min-width: 480px) {
+html {
+  box-sizing: border-box;
 }
-notebook/pc:
-@media (min-width: 860px) {
+*,
+:after,
+:before {
+  box-sizing: inherit;
 }
-*/
-
 
 body {
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .paticka {
-    text-align: center;
-    font-size: 14px;
-    color: silver;
+  text-align: center;
+  font-size: 14px;
+  color: silver;
 }
 
 .paticka a {
-    color: silver;
+  color: silver;
 }
 
-
-/* ------------------------------- */
-/* ----- DOLE BUDE TVOJE CSS ----- */
-/* ------------------------------- */
-
+.main-receipt {
+  min-height: 200px;
+  overflow: auto;
+  position: relative;
+  color: white;
+}
+img {
+  width: 100%;
+  filter: brightness(60%);
+}
+.part-of {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.small-receipt {
+  overflow: auto;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.comments {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+}
+h1 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 28px;
+  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+}
+h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+}
+@media (min-width: 480px) {
+  .main-receipt {
+    min-height: 250px;
+  }
+  .other-receipts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .small-receipt {
+    min-height: 150px;
+    width: 50%;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 860px) {
+  main {
+    display: flex;
+  }
+  .main-receipt {
+    min-height: 400px;
+    width: 42%;
+  }
+  .other-receipts {
+    width: 58%;
+  }
+  .small-receipt {
+    min-height: 200px;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+}
