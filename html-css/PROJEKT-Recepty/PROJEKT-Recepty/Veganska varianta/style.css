@@ -25,13 +25,14 @@ body {
 
 .main-receipt {
   min-height: 200px;
-  overflow: auto;
   position: relative;
   color: white;
 }
 img {
   width: 100%;
+  height: 100%;
   filter: brightness(60%);
+  object-fit: cover;
 }
 .part-of {
   position: absolute;
@@ -41,8 +42,8 @@ img {
   font-weight: 400;
   font-family: "Source Sans Pro", sans-serif;
 }
+
 .small-receipt {
-  overflow: auto;
   position: relative;
   text-align: center;
   color: white;
