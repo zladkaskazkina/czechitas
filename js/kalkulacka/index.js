@@ -80,16 +80,12 @@ const divideClick = () => {
   op = divide;
   display = 'output';
 };
-document.querySelector('#btn0').addEventListener('click', numClick);
-document.querySelector('#btn1').addEventListener('click', numClick);
-document.querySelector('#btn2').addEventListener('click', numClick);
-document.querySelector('#btn3').addEventListener('click', numClick);
-document.querySelector('#btn4').addEventListener('click', numClick);
-document.querySelector('#btn5').addEventListener('click', numClick);
-document.querySelector('#btn6').addEventListener('click', numClick);
-document.querySelector('#btn7').addEventListener('click', numClick);
-document.querySelector('#btn8').addEventListener('click', numClick);
-document.querySelector('#btn9').addEventListener('click', numClick);
+
+const buttons = document.querySelectorAll('.numbers');
+for (let i = 0; i < buttons.length; i += 1) {
+  buttons[i].addEventListener('click', numClick);
+}
+
 document.querySelector('#btn-clear').addEventListener('click', clearClick);
 document.querySelector('#btn-equals').addEventListener('click', equalsClick);
 document.querySelector('#btn-plus').addEventListener('click', plusClick);
