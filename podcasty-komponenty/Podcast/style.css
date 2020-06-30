@@ -1,0 +1,12 @@
+.podcast {
+  max-width: 20rem;
+  margin: 5rem auto;
+}
+
+.podcast__title {
+  color: orange;
+}
+
+.episodes-list {
+  padding-bottom: 1rem;
+}

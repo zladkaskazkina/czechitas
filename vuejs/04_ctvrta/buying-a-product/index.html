@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Buying a product</title>
+  </head>
+  <body>
+    <div id="app" class="product">
+      <img src="img/product.png" class="product__image" />
+      <label for="quantity">Množství</label>
+      <input
+        type="number"
+        id="quantity"
+        class="quantity"
+        value="1"
+        min="1"
+        v-model.number="amount"
+      />
+      <button
+        id="buy-btn"
+        class="btn"
+        v-on:click="handleClick()"
+        v-bind:class="{'btn--done': click}"
+      >
+        {{btnText}}
+      </button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

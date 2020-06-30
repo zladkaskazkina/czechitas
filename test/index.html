@@ -1,0 +1,129 @@
+<!-- 
+1. B 
+
+2. 
+  .container {
+    position: relative;
+  }
+  .title {
+    position: absolute;
+    top: 80px;
+    left: 150px;
+  }
+
+3. @media only screen and (min-width: 720px) {
+    p {
+      color: #fff;
+    }
+  }
+4.    .row {
+        display: flex;
+      }
+      .column {
+        justify-content: center;
+        flex: 1 1 33%;
+        align-items: center;
+        text-align: center;
+      }
+5.    const btn = document.getElementById("btn");
+
+      function sayHello() {
+        console.log("ahoj");
+      }
+      btn.addEventListener("click", sayHello);
+
+6. Na strance neexistuje element s id "title". Chybova hlaska nam vzkazuje, ze nemuzeme nastavit textContent u null. Null v JS znamena nic (neexistuje). Bud jsou spatne napsane uvozovky nebo elemnt s timto id neni na strance.
+7. function cutoff(arr, max) {
+        arr.forEach((item, i) => {
+          if (item > max) {
+            arr.splice(i, 1, max);
+          }
+        });
+        console.log(arr);
+      }
+8. A, C, D
+9. const lednice = [
+        {
+          name: "tomato",
+          type: "vegetable",
+          days: 13,
+        },
+        {
+          name: "milk",
+          type: "dairy",
+          days: 5,
+        },
+        {
+          name: "mushrooms",
+          type: "other",
+          days: 3,
+        },
+        {
+          name: "eggs",
+          type: "other",
+          days: 20,
+        },
+        {
+          name: "butter",
+          type: "dairy",
+          days: 25,
+        },
+      ];
+10. function renderFridgeItem(obj) {
+        const fridgeItem = document.createElement("div");
+        fridgeItem.classList = "fridge-item";
+        fridgeItem.innerHTML = `  <div class="fridge-item__name">${obj.name}</div>
+                                  <div class="fridge-item__type">${obj.type}</div>
+                                  <div class="fridge-item__expr">${obj.days}</div>`;
+        return fridgeItem;
+      }
+11. fetch("https://restcountries.eu/rest/v2/alpha/cz")
+        .then((response) => response.json())
+        .then((data) => console.log(data.population))
+        .catch((error) => console.warn(error));
+
+12. A, C
+13. 
+v-bind:class="{'btn-active' : active}"
+14. https://github.com/zladkaskazkina/testRep
+15. https://github.com/zladkaskazkina/testRep/tree/components
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <button
+        class="btn"
+        v-bind:class="{'btn-active' : active}"
+        v-on:click="btnClick"
+      >
+        Ok
+      </button>
+    </div>
+    <style>
+      .btn-active {
+        background-color: red;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          active: true,
+        },
+        methods: {
+          btnClick() {
+            this.active = !this.active;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

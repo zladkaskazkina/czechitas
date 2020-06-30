@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue project</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>Ahoj, je to {{jmeno}}</p>
+      <p>Kdyby byla člověkem, bylo by ji {{vek * 7}}</p>
+      <ul>
+        <li v-for="jmeno in aktivity">{{ jmeno }}</li>
+      </ul>
+      <p>Jeji vaha je {{vaha}}</p>
+      <button v-on:click="nakrmtrochu">Nakrm trochu</button>
+      <button v-on:click="nakrmhodne">Nakrm hodne</button>
+      <button v-on:click="vyvenci">Vyvenci</button>
+      <p>posledni akce: {{posledniakce}}</p>
+      <button v-on:click="zastekej">Zastekej</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

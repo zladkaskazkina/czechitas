@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Episode/style.css" />
+    <link rel="stylesheet" href="Podcast/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <template id="episode-template">
+      <div class="episode">
+        <div class="episode__num">{{num}}</div>
+        <div class="episode__body">
+          <div class="episode__title">{{title}}</div>
+          <div class="episode__guest">{{guest}}</div>
+        </div>
+      </div>
+    </template>
+
+    <template id="podcast-template">
+      <div class="podcast">
+        <h2 class="podcast__title">{{title}}</h2>
+        <div class="episodes-list"></div>
+      </div>
+    </template>
+
+    <div id="app"></div>
+
+    <script src="Episode/index.js"></script>
+    <script src="Podcast/index.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
